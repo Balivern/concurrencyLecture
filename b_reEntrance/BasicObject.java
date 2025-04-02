@@ -3,11 +3,11 @@ package b_reEntrance;
 
 public class BasicObject {
 
-//	Adding a static counter could be useful to control the number of 'setSum'	
-//	static int count =0;
+//	Adding a static counter could be useful to control the number of 'setSum'
+	static int count = 0;
 	private int sum = 0;
 	
-	public void calculate() {
+	public /*synchronized*/ void calculate() {
 		setSum(getSum()+1);
 		
 //		int val = getSum();
@@ -29,5 +29,4 @@ public class BasicObject {
 		if (n < 2) return 1;
 		else return fib(n-1)+fib(n-2);
 	}
-	
 }
