@@ -5,7 +5,7 @@ public class Main {
         Scheduler service = new Scheduler();
         for(int i = 0; i < 10 ; i++ ) {
             int x = i;
-            service.manage((int i) -> System.out.println(x));
+            service.manage((int j) -> System.out.println(x));
         }
     }
 }

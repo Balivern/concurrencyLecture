@@ -1,10 +1,13 @@
 package tp_concurrency.preparation1;
 
-import tp_concurrency.realisation1.Scheduler;
+import java.util.concurrent.ExecutionException;
 
 public class Main {
-    public static void main(String[] args) {
-        tp_concurrency.realisation1.Scheduler service = new Scheduler();
-        service.manage((i) -> System.out.println());
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        Summation summation = new Summation();
+        summation.manage(10);
+
+        FibonacciRec fibonacci = new FibonacciRec();
+        fibonacci.soumettre(43);
     }
 }
